@@ -1,0 +1,130 @@
+.tabs,.item a,.head2{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tabs>div{
+	width: 49%;
+	text-align: center;
+	height: 5.55rem;
+	line-height: 5.55rem;
+	font-size: 1.5rem;
+}
+.active{
+	border-bottom: .26rem solid black;
+}
+#f03 p{
+	color: #494949;
+}
+header{
+	height: 23.6rem;
+	background: #7c9ae3;
+}
+.minespan{
+	height: 6.6rem;
+	background: #f2f1ed;
+}
+.minespan span{
+	line-height: 6.6rem;
+	color:#5a5957;
+	margin-left: 2rem;
+	font-size: 1.4rem
+}
+.minelist1{
+	padding: 2rem;
+	height: 6rem;
+	border-bottom: .07rem solid #f3f3f3;
+}
+.minelist1 h2{
+	margin-top: .6rem;
+    line-height:2.0rem;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 800;
+}
+.minelist1 p{
+	color: #aaa;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+.item{
+	margin: 2.08rem;
+	height:17rem;
+	border-bottom: 1px solid #aaa;
+}
+.item img{
+	width:11.1rem;
+	height:15.5rem;
+}
+.item-title {
+    display: block;
+    margin-top: .6rem;
+    line-height:2.0rem;
+    font-size: 1.8rem;
+    color: black;
+    /*background: pink;*/
+}
+.as2{
+	margin-left:2.08rem;
+	margin-right:1.4rem;
+	width: 22.2rem;
+	
+}
+.meiyou{
+	background: #f2f1ed;
+	height: 70rem;
+}
+.meiyou img{
+	margin-left: 15rem;
+	margin-top: 10rem;
+}
+.meiyou p{
+	margin-top: 4rem;
+	margin-left: 20rem;
+}
+.head1{
+	height: 6rem;
+}
+.head1 img{
+	margin-left: 44.5rem;
+	margin-top: 2rem;
+	width: 3.5rem;
+	
+}
+#touxiang img{
+	width: 10rem;
+	border-radius: 100%;
+	margin-left: 4rem;
+	margin-right: 2.3rem;
+}
+#txright span{
+	font-size: 2.1rem;
+	font-family: "微软雅黑";
+	font-weight: 800;
+	color: white;
+}
+#txright{
+
+}
+#mineticket{
+	width: 16rem;
+	height: 4.7rem;
+	border: .07rem solid white;
+	border-radius: .6rem;
+	margin-top: 3rem;
+	/*display: flex;
+	flex-wrap: nowrap;*/
+}
+#mineticket img{
+	margin-left: 2rem;
+	margin-top: 1rem;
+	width: 3rem;
+}
+#mineticket p{
+	float: right;
+	line-height: 4.7rem;
+	color: white;
+	margin-right: 3rem;
+	font-size: 1.38rem
+}
+

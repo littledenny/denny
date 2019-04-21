@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/c.css" />
+		<link rel="stylesheet" type="text/css" href="css/mine.css" />
+
+	</head>
+	<body>
+		<header>
+			<div class="head1">
+				<a href="setting.html">
+					<img src="img/setting_white.png"/>
+				</a>
+			</div>
+			<div class="head2">
+				<div id="touxiang">
+					<img src="img/judy.jpg"/>
+				</div>
+				<div id="txright">
+					<span>袁艺鹏</span>
+					<div id="mineticket">
+						<a href="wddyp.html">
+						<img src="img/ticket_white.png"/>
+						<p>我的电影票</p>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+		<div class="tabs">
+			    <div class="">
+				    想去
+			    </div> 
+			    <div class="">
+				    订单
+			    </div> 
+
+		</div>
+		<section class="swiper-container">
+			<!--正在热映电影列表内容-->
+			<figure class="swiper-wrapper">
+				<div class="swiper-slide" id="mineslide1">
+					<!--讨论-->
+					<div class="minespan">
+						<span>收藏的行记出现在这里</span>
+					</div>
+					<div class="minelist1">
+						<h2 id="">东京</h2>
+						<p>4618人想去，807个话题</p>
+					</div>
+					<div class="minelist1">
+						<h2 id="">香港</h2>
+						<p>4618人想去，807个话题</p>
+					</div>
+					<div class="minelist1">
+						<h2 id="">拉萨</h2>
+						<p>104人想去，20个话题</p>
+					</div>
+					<div class="minelist1">
+						<h2 id="">洛杉矶</h2>
+						<p>4261人想去，307个话题</p>
+					</div>
+					<div class="minelist1">
+						<h2 id="">罗马</h2>
+						<p>3560人想去，2242个话题</p>
+					</div>
+				</div>
+				<div class="swiper-slide" id="mineslide1">
+					<!--影评-->
+					<div class="minespan">
+						<span>0个</span>
+					</div>
+					<div class="meiyou">
+						<img src="img/meiyou.png" />
+						<p>
+							您还没有订单
+						</p>
+					</div>
+
+				</div>
+
+			</figure>
+		</section>
+		<footer class="footer">
+			<div id="f01">
+				<a href="index.html">
+					<img src="img/index1.png" />
+					<p>
+						首页
+					</p>
+				</a>
+			</div>
+			<div id="f02">
+				<a href="finder.html">
+					<img src="img/find1.png" />
+					<p>发现</p>
+				</a>
+			</div>
+			<div id="f03">
+				<a href="mine.html">
+					<img src="img/mine1.png" />
+					<p>我的</p>
+				</a>
+			</div>
+		</footer>
+		<!-- <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				on: {
+					slideChange: function() {
+						$(".active").removeClass('active');
+						$(".tabs div").eq(mySwiper.activeIndex).addClass('active');
+					},
+				},
+			})
+
+			//      tab选项卡切换,调用slide
+			$(".tabs div").on('click touchend', function(e) {
+				e.preventDefault()
+				$(".active").removeClass('active');
+				$(this).addClass('active');
+				mySwiper.slideTo($(this).index());
+			});
+
+			$(".tabs div").click(function(e) {
+				e.preventDefault();
+			});
+		</script>
+	</body>
+</html>

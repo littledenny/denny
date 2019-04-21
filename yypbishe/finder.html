@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>发现</title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/c.css" />
+		<style type="text/css">
+			body{
+				background: #f1f1f1;
+			}
+			.dangdilxd {
+				margin-left: 0.888rem;
+			}
+			.lxzt-box{
+				height: 48rem;
+			}
+			.lxzt-box img {
+				border-radius: 1.066rem;
+			}
+
+			.dangdilxd>.ddtop {
+				display: flex;
+				line-height: 3rem;
+				height: 3rem;
+
+			}
+
+			.ddtop-left {
+				font-size: 2.4rem;
+				font-weight: 700;
+			}
+
+			.ddtop-right {
+				font-size: 1.6rem;
+				color: rgb(102, 102, 102);
+				margin-left: 22rem;
+			}
+
+			.city-slide img {
+				width: 13.333rem;
+				height: 13.333rem;
+			}
+
+			.lunbo-box {
+				margin-top: 0.888rem;
+			}
+
+			.lxzt {
+				width: 94%;
+				height: 37.647058rem;
+			}
+
+			.lxzt-top {
+				display: flex;
+				margin-top: 2rem;
+				position: relative;
+			}
+
+			.lxzt .zt1 {
+				width: 30.666rem;
+				height: 20rem;
+
+			}
+
+			.lxzt .zt2 {
+				width: 14.666rem;
+				height: 20rem;
+				margin-left: 2.7rem;
+			}
+
+			.wordzt2 {
+				margin-left: 2.7rem;
+			}
+
+			.lxzt .zt3 {
+				width: 14.666rem;
+				height: 20rem;
+				/* margin-left: 3rem; */
+			}
+
+			.lxzt .zt4 {
+				margin-right: 2rem;
+			}
+
+			.lxzt-bottom {
+				display: flex;
+				margin-top: 2rem;
+			}
+
+			.lxzt-word {
+				color: white;
+				position: absolute;
+				top: 13rem;
+				left: 1.2rem;
+			}
+
+			.lxzt-word-big {
+				font-size: 2.4rem;
+				font-weight: 600;
+			}
+
+			.lxzt-word-small {
+				font-size: 1.6rem
+			}
+
+			.lxzt-top-left,
+			.lxzt-top-right,
+			.lxzt-top-center {
+				position: relative;
+			}
+			.mt20{
+				margin-top: 50rem;
+			}
+				
+			.cnxh{
+				width: 100%;
+				/* height: 266.666rem; */
+				/* background: red; */
+				/* float: left; */
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.cnxh-box{
+				margin-left: 3%;
+				width: 46%;
+				height: 37.333rem;
+				background: white;
+				margin-top: 2.666rem;
+				border-radius: 0.8rem;
+				
+			} 	
+			.cnxh-box img{
+				width: 100%;
+				height: 23.066rem;
+				border-radius: 0.8rem 0.8rem 0rem 0rem;
+				
+			}
+			.cnxh-box h3{
+				margin-left: 1.6rem;
+				height: 4.666rem;
+				line-height: 4.666rem;
+				font-size: 1.6rem;
+				margin-top: 1.6px;
+				color: #BC8E4C;
+			}
+				
+			.cnxh-box p{
+				margin-left: 1.6rem;
+				line-height: 2.4rem;
+				font-size: 1.866rem;
+				height: 6.133rem;
+				text-overflow:ellipsis;
+				overflow: hidden;
+			}
+			.cnxh-box .span-left{
+				margin-left: 1.6rem;
+				color: #FF5000;
+				font-size: 2.0rem;
+			}
+			.cnxh-box .span-right{
+				color: #999999;
+				font-size: 1.6rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<header class="header">
+				<img src="img/logo.png" class="header-logo">
+				<!-- <h1 class="header-title">鹏程旅行</h1> -->
+				<div id="search">
+					<a href="search.html">
+						<p class="sousuo"><img src="img/search.png"/></p>
+					</a>
+				</div>
+			</header>
+
+
+			<div class="main">
+				<!-- 当地旅行地 -->
+				<div class="dangdilxd">
+					<div class="ddtop">
+						<div class="ddtop-left">
+							当地旅行地
+						</div>
+						<div class="ddtop-right">
+							查看更多目的地>
+						</div>
+					</div>
+					<div class="swiper-container lunbo-box">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide city-slide"><img src="img/banner1.jpeg"></div>
+							<div class="swiper-slide city-slide"><img src="img/banner2.jpeg"></div>
+							<div class="swiper-slide city-slide"><img src="img/banner3.jpeg"></div>
+							<div class="swiper-slide city-slide"><img src="img/banner3.jpeg"></div>
+							<div class="swiper-slide city-slide"><img src="img/banner3.jpeg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 旅行主题 -->
+				<div class="dangdilxd lxzt-box">
+					<div class="ddtop">
+						<div class="ddtop-left">
+							旅行主题
+						</div>
+						<div class="ddtop-right">
+							最适合你的旅行方式>
+						</div>
+					</div>
+					<div class="lxzt">
+						<div class="lxzt-top">
+							<div class="lxzt-top-left">
+								<img src="img/index-strategy-1.jpeg" class="zt1">
+								<div class="lxzt-word">
+									<div class="lxzt-word-big">周末去哪儿</div>
+									<div class="lxzt-word-small">值得用心对待</div>
+								</div>
+							</div>
+							<div class="lxzt-top-right">
+								<img src="img/index-strategy-1.jpeg" class="zt2">
+								<div class="lxzt-word wordzt2">
+									<div class="lxzt-word-big">免签落地签</div>
+									<div class="lxzt-word-small">有护照就出发</div>
+								</div>
+							</div>
+						</div>
+						<div class="lxzt-bottom">
+							<div class="lxzt-top-left">
+								<img src="img/index-strategy-1.jpeg" class="zt3 zt4">
+								<div class="lxzt-word">
+									<div class="lxzt-word-big">亲子酒店榜</div>
+									<div class="lxzt-word-small">带娃快乐入睡</div>
+								</div>
+							</div>
+							<div class="lxzt-top-center">
+								<img src="img/index-strategy-1.jpeg" class="zt3 zt4">
+								<div class="lxzt-word">
+									<div class="lxzt-word-big">白富美最爱</div>
+									<div class="lxzt-word-small">小仙女专属</div>
+								</div>
+							</div>
+							<div class="lxzt-top-right">
+								<img src="img/index-strategy-1.jpeg" class="zt3">
+								<div class="lxzt-word">
+									<div class="lxzt-word-big">日本樱花季</div>
+									<div class="lxzt-word-small">樱花玩乐</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				
+				</div>
+				
+				<!-- 猜你喜欢 -->
+				<div class="dangdilxd" id="app">
+					<div class="ddtop">
+						<div class="ddtop-left">
+							猜你喜欢
+						</div>
+						<div class="ddtop-right">
+							查看更多旅行目的地>
+						</div>
+					</div>
+					<div class="cnxh">
+						<div class="cnxh-box" v-for="item in cnxh">
+							<img :src="item.imgurl" >
+							<h3>{{item.title}}</h3>
+							<p>{{item.word}}菜</p>
+							<span class="span-left">
+								￥{{item.price}}
+							</span>
+							<span class="span-right">
+								{{item.person}}人购买
+							</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<footer class="footer">
+				<div id="f01">
+					<a href="index.html">
+						<img src="img/index1.png"/>
+					<p>
+						首页
+					</p>
+					</a>
+				</div>
+				<div id="f02">
+					<a href="finder.html">
+						<img src="img/find1.png"/>
+					<p>发现</p>
+					</a>
+				</div>
+				<div id="f03">
+					<a href="mine.html">
+						<img src="img/mine1.png"/>
+					<p>我的</p>
+					</a>
+				</div>
+			</footer>
+			
+			
+			
+			
+
+
+
+			
+
+
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				slidesPerView: 3.4, //一行显示3个
+				slidesPerColumn: 1, //显示2行
+				spaceBetween: 24,
+				freeMode: true,
+				freeModeMomentum: false,
+			})
+		</script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					cnxh:[], //推荐攻略的数据 数组
+				},
+				mounted: function() {
+					this.first()
+				},
+				methods: {
+					first() {
+						$.getJSON("json/finder.json", function(data) {
+							// console.log(this.cnxh)
+							$.each(data, function(i, item) {
+								this.cnxh.push(item)
+							}.bind(this))
+						}.bind(this))
+					},
+
+				}
+			})
+		</script>
+	</body>
+</html>

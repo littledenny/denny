@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<style type="text/css">
+			.video__header {
+				margin-left: 10px;
+				margin-top: 10px;
+				width: 355px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				font-size: 16px;
+				color: #f55b50;
+				background: #f6f6f6;
+				border-radius: 8px;
+			}
+
+			.vidoe__body {
+				margin-left: 15px;
+
+			}
+
+			.video__box__title {
+				width: 95%;
+				height: 36px;
+				line-height: 36px;
+				font-size: 16px;
+				color: #444444;
+			}
+
+			.petvideo {
+				width: 350px;
+				height: 200px;
+				background: black;
+			}
+
+			.video__tx img {
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+
+			.video__box__user {
+				height: 40px;
+				margin-top: 10px;
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px solid #B0B3B6;
+				color: #999;
+			}
+
+			.video__box__user span {
+				line-height: 24px;
+			}
+
+			.vidoe__left,
+			.vidoe__right {
+				display: flex;
+
+			}
+
+			.vidoe__right {
+				margin-right: 15px;
+			}
+
+			.video__xh img {
+				width: 24px;
+				height: 20px;
+				margin-right: 15px;
+				display: none;
+			}
+
+			.xihuan__active {
+				display: inline !important
+			}
+		</style>
+	</head>
+	<body>
+		<div class="video__header">
+			视频
+		</div>
+		<div id="pushvideo" class="vidoe__body">
+			<div class="video__box">
+				<div class="video__box__title">
+					这家伙今天竟然逃出来把家里搞的一团糟
+				</div>
+				<div class="video__box__video">
+					<video class="petvideo" controls loop src="video/video1.mp4"></video>
+				</div>
+				<div class="video__box__user">
+					<div class="vidoe__left">
+						<div class="video__tx">
+							<img src="img/pet/金毛1.jpg">
+						</div>
+						<span>冰心萍儿sssss</span>
+					</div>
+					<div class="vidoe__right">
+						<div class="video__xh">
+							<img class="xh" src="img/喜欢.png">
+							<img class="bxh xihuan__active" src="img/不喜欢.png">
+						</div>
+						<span>2</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="kong">
+		</div>
+		<footer>
+			<div class="footer__box">
+				<a href="index.html">
+					<img src="img/首页.png">
+					<p>首页</p>
+				</a>
+			</div>
+			<div class="footer__box">
+				<img src="img/购物车未选中.png">
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/探索选中.png">
+					<p>视频</p>
+				</a>
+
+			</div>
+			<div class="footer__box">
+				<img src="img/我的未选中.png">
+				<p>首页</p>
+			</div>
+		</footer>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script> -->
+		<script type="text/javascript">
+			$(function() {
+				
+				
+				function pushVideo() {
+					
+					$.getJSON("json/video.json",function(data){
+						$.each(data,function(i,item){
+							addVideo(item)
+						})
+						zhucexihuan()
+					})
+				}
+				function addVideo(item){
+					var petstr = 
+					`
+
+						
+						<div class="video__box">
+							<div class="video__box__title">
+								${item.title}
+							</div>
+							<div class="video__box__video">
+								<video class="petvideo" controls loop src="${item.videourl}"></video>
+							</div>
+							<div class="video__box__user">
+								<div class="vidoe__left">
+									<div class="video__tx">
+										<img src="${item.txurl}">
+									</div>
+									<span>${item.author}</span>
+								</div>
+								<div class="vidoe__right">
+									<div class="video__xh">
+										<img class="xh" src="img/喜欢.png">
+										<img class="bxh xihuan__active" src="img/不喜欢.png">
+									</div>
+									<span>2</span>
+								</div>
+						
+						
+							</div>
+						</div>
+					`
+					$("#pushvideo").append(petstr)
+					
+				}
+				pushVideo()
+				function zhucexihuan() {
+					$(".xh").click(function() {
+						$(this).removeClass("xihuan__active");
+						$(this).next().addClass("xihuan__active"); 
+						var num = $(this).parent().siblings("span").html()
+						num --
+						$(this).parent().siblings("span").html(num)
+					});
+					$(".bxh").click(function() {
+						$(this).removeClass("xihuan__active")
+						$(this).prev().addClass("xihuan__active")
+						var num1 = $(this).parent().siblings("span").html()
+						num1 ++
+						$(this).parent().siblings("span").html(num1)
+					});
+				}
+				
+			});
+		</script>
+		
+	</body>
+</html>

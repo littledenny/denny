@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style type="text/css">
+			footer{
+				display: flex;
+				position: relative;
+				position:fixed;
+				bottom:0px;
+				height: 60px;
+				width: 375px;
+				border-top: 1px solid lightgray;
+				background: white;
+			}
+			.footer__box{
+				width: 25%;
+				text-align: center;
+				color:dimgray
+			}
+			.footer__box img{
+				width: 40px;
+				height: 40px;
+				text-align: center;
+			}
+			.banner__lunbo{
+				width: 375px;
+				height: 220px;
+			}
+			.banner__lunbo img{
+				width: 375px;
+				height: 220px;
+			}
+			.section__head{
+				height: 32px;
+				line-height: 32px;
+				width: 100%;
+				border-bottom: 1px solid lightgray;
+			}
+			.section__head h3{
+				float: left;
+				margin-left: 18px;
+				font-size: 14px;
+				color: #1c1c1c;
+				font-weight: 400;
+			}
+			.section__head span{
+				float: right;
+				margin-right: 10px;
+				font-size: 12px;
+				color: #b0b3b6;
+			}
+			.section__body{
+				margin-top: 15px;
+				margin-left: 15px;
+				display: flex;
+				flex-wrap:wrap;
+			}
+			.cat__card{
+				width: 78px;
+				height: 88px;
+				border-radius: 6px;
+				margin-right: 10px;
+				margin-bottom: 15px;
+				text-align: center;
+				box-shadow:0 12px 10px rgba(83,83,83,0.17);
+			}
+			.cat__card img{
+				width: 54px;
+				height: 54px;
+				border-radius: 50%;
+				margin-top: 10px;
+			}
+			.cat__card p{
+				font-size: 12px;
+				margin-top: 5px;
+			}
+			.zhishi__box{
+				width: 97%;
+				display: flex;
+				border-bottom: 1px solid lightgray;
+			}
+			.zhishi__box__left{
+				width: 265px;
+				height: 100px;
+			}
+			.zhishi__box__left p{
+				font-size: 16px;
+				height:45px;
+				line-height: 50px;
+				color:#404040 ;
+			}
+			.zhishi__box__left span{
+				margin-top: 13px;
+			}
+			.zhishi__box__left span:nth-of-type(1){
+				font-size: 14px;
+				float: left;
+				color: #c0c0c0;
+				font-weight: 800;
+			}
+			.zhishi__box__left span:nth-of-type(2){
+				font-size: 14px;
+				float: right;
+				color: #c0c0c0;
+				font-weight: 800;
+			}
+			.zhishi__box__right{
+				width: 130px;
+				height: 100px;
+			}
+			.zhishi__box__right img{
+				width: 90px;
+				height: 60px;
+				margin-left: 10px;
+				margin-top: 15px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<!-- 轮播图部分 -->
+			<div class="banner__lunbo">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide banner-box"><img src="img/banner1.jpg"></div>
+						<div class="swiper-slide banner-box"><img src="img/banner2.jpg"></div>
+						<div class="swiper-slide banner-box"><img src="img/banner3.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</header>
+		<div class="page">
+			<section class="section__box">
+				<div class="section__head">
+					<h3>热门宠物</h3>
+					<span> 更多 > </span>
+				</div>
+				<div id="petappend" class="section__body">
+					<!-- ajax调用JSON填充 -->
+
+				</div>
+				<section class="section__box">
+					<div class="section__head">
+						<h3>知识推荐</h3>
+						<span> 更多 > </span>
+					</div>
+					<div id="knowledgeappend" class="section__body">
+						<!-- <div class="zhishi__box"> -->
+							<!-- 知识推荐ajax填充列表 -->
+<!-- 							<div class="zhishi__box__left">
+								<p>什么原因导致布偶猫价格这么高</p>
+								<span>《猫咪品种》</span>
+								<span>2019-03-12</span>
+							</div>
+							<div class="zhishi__box__right">
+								<img src="img/pet/布偶猫1.jpg" >
+							</div> -->
+						<!-- </div> -->
+					</div>
+			</section>
+		</div>
+		
+		
+		<aside class="kong"></aside>
+		<footer>
+			<div class="footer__box">
+				<img src="img/首页选中.png" >
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<img src="img/购物车未选中.png" >
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/探索未选中.png" >
+					<p>视频</p>
+				</a>
+				
+			</div>
+			<div class="footer__box">
+				<img src="img/我的未选中.png" >
+				<p>首页</p>
+			</div>
+		</footer>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: true, //可选选项，自动滑动
+				loop : true, //环路
+				pagination: {
+					el: '.swiper-pagination',
+					// bulletClass : 'my-bullet',
+				},
+			})
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				
+				function pushPet() {
+					$.getJSON("json/indexpet.json",function(data){
+						$.each(data,function(i,item){
+							addPet(item)
+						})
+					})
+				}
+				function addPet(item){
+					var petstr = 
+					`
+						<div class="cat__card">
+							<img src="${item.imgurl}" >
+							<p>${item.title}</p>
+						</div>
+					`
+					$("#petappend").append(petstr)
+				}
+				pushPet()
+				
+				
+				function pushKnow() {
+					$.getJSON("json/indexzhishi.json",function(data){
+						$.each(data,function(i,item){
+							addKnow(item)
+						})
+					})
+				}
+				function addKnow(item){
+					var petstr = 
+					`
+						<div class="zhishi__box">
+							<div class="zhishi__box__left">
+								<p>${item.title}</p>
+								<span>${item.from}</span>
+								<span>${item.time}</span>
+							</div>
+							<div class="zhishi__box__right">
+								<img src="img/pet/布偶猫1.jpg" >
+							</div>
+						</div>
+					`
+					$("#knowledgeappend").append(petstr)
+				}
+				pushKnow()
+			});
+		</script>
+	</body>
+</html>
