@@ -236,6 +236,7 @@
 				function addKnow(item){
 					var petstr = 
 					`
+					<a href="${item.aurl}">
 						<div class="zhishi__box">
 							<div class="zhishi__box__left">
 								<p>${item.title}</p>
@@ -246,6 +247,7 @@
 								<img src="img/pet/布偶猫1.jpg" >
 							</div>
 						</div>
+					</a>
 					`
 					$("#knowledgeappend").append(petstr)
 				}

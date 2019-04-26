@@ -3,24 +3,31 @@
         "title": "什么原因导致布偶猫价格这么高",
 		"from": "<<猫咪品种>>",
 		"time": "2019-03-12",
-        "imgurl": "img/pet/金毛1.jpg"
+        "imgurl": "img/pet/金毛1.jpg",
+		"aurl":"./pages/know1.html"
     },
 	{
 	    "title": "什么原因导致布偶猫价格这么高",
 		"from": "<<猫咪品种>>",
 		"time": "2019-03-12",
-	    "imgurl": "img/pet/金毛1.jpg"
+	    "imgurl": "img/pet/金毛1.jpg",
+		"aurl":"./pages/know1.html"
+
 	},
 	{
 	    "title": "什么原因导致布偶猫价格这么高",
 		"from": "<<猫咪品种>>",
 		"time": "2019-03-12",
-	    "imgurl": "img/pet/金毛1.jpg"
+	    "imgurl": "img/pet/金毛1.jpg",
+		"aurl":"./pages/know1.html"
+
 	},
 	{
 	    "title": "什么原因导致布偶猫价格这么高",
 		"from": "<<猫咪品种>>",
 		"time": "2019-03-12",
-	    "imgurl": "img/pet/金毛1.jpg"
+	    "imgurl": "img/pet/金毛1.jpg",
+		"aurl":"./pages/know1.html"
+
 	}
 ]
