@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>商城</title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style type="text/css">
+			footer{
+				display: flex;
+				position: relative;
+				position:fixed;
+				bottom:0px;
+				height: 60px;
+				width: 375px;
+				border-top: 1px solid lightgray;
+				background: white;
+			}
+			.footer__box{
+				width: 25%;
+				text-align: center;
+				color:dimgray
+			}
+			.footer__box img{
+				width: 40px;
+				height: 40px;
+				text-align: center;
+            }
+            .store__header{
+                width: 375px;
+                height: 35px;
+                line-height: 35px;
+                border-bottom: 1px solid gray;
+                display: flex;
+
+            }
+            .store__header span{
+                width: 187px;
+                display: block;
+                text-align: center
+            }
+            .store__main{
+                margin-top: 20px;
+            }
+            .store__main li{
+                margin-left: 15px;
+                display: flex
+            }
+            .store__img{
+                width: 140px;
+                height: 140px;
+            }
+            .list__right{
+                margin-left: 10px;
+            }
+            .list__right__top{
+                color: #333;
+                
+            }
+            .list__right__center{
+                color: #f55b50;
+                font-size: 18px;
+                margin-top: 20px;
+
+            }
+            .list__right__bottom{
+                color: #999999;
+                font-size: 18px;
+                margin-top: 20px;
+
+            }
+		</style>
+	</head>
+	<body>
+        <section class="store___box">
+            <div class="store__header">
+                <span>销量</span>
+                <span>价格</span>
+            </div>
+
+            <div class="store__main">
+                <ul id="storeappend">
+                    <!-- <a href="">
+                        <li>
+                            <div class="list__left">
+                                <img src="img/store/1.jpg" class="store__img">
+                            </div>
+                            <div class="list__right">
+                                <div class="list__right__top">
+                                    法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg
+                                </div>
+                                <div class="list__right__center">
+                                    ￥68.00
+                                </div>
+                                <div class="list__right__bottom">
+                                    已售512758
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </a> -->
+                </ul>
+            </div>
+        </section>
+
+
+
+		<aside class="kong"></aside>
+		<footer>
+			<div class="footer__box">
+				<img src="img/首页.png" >
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<img src="img/购物车选中.png" >
+				<p>商城</p>
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/探索未选中.png" >
+					<p>视频</p>
+				</a>
+				
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/我的未选中.png" >
+					<p>我的</p>
+				</a>
+			</div>
+		</footer>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				function pushKnow() {
+					$.getJSON("json/store.json",function(data){
+						$.each(data,function(i,item){
+							addKnow(item)
+						})
+					})
+				}
+				function addKnow(item){
+					var petstr = 
+					`
+                        <a href="${item.url}">
+                            <li>
+                                <div class="list__left">
+                                    <img src="${item.imgurl}" class="store__img">
+                                </div>
+                                <div class="list__right">
+                                    <div class="list__right__top">
+                                            ${item.title}
+                                    </div>
+                                    <div class="list__right__center">
+                                        ￥${item.price}
+                                    </div>
+                                    <div class="list__right__bottom">
+                                        已售${item.ys}
+                                    </div>
+                                </div>
+                                
+                            </li>
+                        </a>
+					`
+					$("#storeappend").append(petstr)
+				}
+				pushKnow()
+			});
+		</script>
+	</body>
+</html>

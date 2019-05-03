@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style type="text/css">
+			footer{
+				display: flex;
+				position: relative;
+				position:fixed;
+				bottom:0px;
+				height: 60px;
+				width: 375px;
+				border-top: 1px solid lightgray;
+				background: white;
+			}
+			.footer__box{
+				width: 25%;
+				text-align: center;
+				color:dimgray
+			}
+			.footer__box img{
+				width: 40px;
+				height: 40px;
+				text-align: center;
+			}
+            .header__box{
+                width: 375px;
+                height: 255px;
+                background: #f55b51;
+                position: relative;
+            }
+            .header__box__top{
+                height: 33px;
+                width: 375px;
+            }
+            .header__box__top img{
+                width: 28px;
+                height: 28px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            .header__box__body{
+                display: flex;
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+            .header__box__body img{
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+            }
+            .header__box__body__name .name{
+                height: 65px;
+                line-height: 65px;
+                margin-left: 20px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+			.header__box__bottom{
+                display: flex;
+                justify-content:space-around;
+                margin-top: 30px;
+            }
+            .header__box__bottom .minenum p{
+                width: 40px;
+                text-align: center;
+                color: #ffffff;
+            }
+            .mine__main{
+                margin-left: 15px;
+                margin-top: 30px;
+                font-size: 18px;
+            }
+            .mine__main__body{
+                display: flex;
+                margin-top: 20px;
+            }
+            .mine__main__body__left img{
+                width: 175px;
+                height: 100px;;
+            }
+            .mine__main__body__right{
+                margin-left: 20px;
+            }
+            .mine__main__body__right div{
+                line-height: 35px;
+            }
+		</style>
+	</head>
+	<body>
+		<header>
+            <div class="header__box">
+
+                <div class="header__box__top">
+                    <img src="img/setting.png" alt="">
+                </div>
+
+                <div class="header__box__body">
+                    <img src="img/minetx.jpg" alt="">
+                    <div class="header__box__body__name">
+                        <div class="name">铲屎官</div>
+                    </div>
+                </div>
+
+                <div class="header__box__bottom">
+                    <div class="minenum">
+                        <p>0</p>
+                        <p>关注</p>
+                    </div>
+                    <div class="minenum">
+                        <p>0</p>
+                        <p>粉丝</p>
+                    </div>
+                    <div class="minenum">
+                        <p>0</p>
+                        <p>收藏</p>
+                    </div>   
+                    <div class="minenum">
+                        <p>0</p>
+                        <p>足迹</p>
+                    </div>   
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="mine__main">
+                <div class="mine__main__top">
+                    我的宠物
+                </div>
+                <div class="mine__main__body">
+                    <div class="mine__main__body__left">
+                        <img src="img/pet/布偶猫1.jpg" alt="">
+                    </div>
+                    <div class="mine__main__body__right">
+                        <div>
+                            姓名：啵啵
+                        </div>
+                        <div>
+                            性别：女生
+                        </div>
+                        <div>
+                            年龄：2岁
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mine__main__body">
+                        <div class="mine__main__body__left">
+                            <img src="img/pet/金毛1.jpg" alt="">
+                        </div>
+                        <div class="mine__main__body__right">
+                            <div>
+                                姓名：咚咚
+                            </div>
+                            <div>
+                                性别：男生
+                            </div>
+                            <div>
+                                年龄：3岁
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+
+		<aside class="kong"></aside>
+		<footer>
+			<div class="footer__box">
+				<img src="img/首页.png" >
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<img src="img/购物车未选中.png" >
+				<p>首页</p>
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/探索未选中.png" >
+					<p>视频</p>
+				</a>
+				
+			</div>
+			<div class="footer__box">
+				<a href="video.html">
+					<img src="img/我的选中.png" >
+					<p>我的</p>
+				</a>
+			</div>
+		</footer>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				function pushKnow() {
+					$.getJSON("json/indexzhishi.json",function(data){
+						$.each(data,function(i,item){
+							addKnow(item)
+						})
+					})
+				}
+				function addKnow(item){
+					var petstr = 
+					`
+					<a href="${item.aurl}">
+						<div class="zhishi__box">
+							<div class="zhishi__box__left">
+								<p>${item.title}</p>
+								<span>${item.from}</span>
+								<span>${item.time}</span>
+							</div>
+							<div class="zhishi__box__right">
+								<img src="img/pet/布偶猫1.jpg" >
+							</div>
+						</div>
+					</a>
+					`
+					$("#knowledgeappend").append(petstr)
+				}
+				pushKnow()
+			});
+		</script>
+	</body>
+</html>
