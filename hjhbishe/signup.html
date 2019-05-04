@@ -7,18 +7,89 @@
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<style type="text/css">
-
+            #big {
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-top: 10px;
+			}
+			
+			#big img {
+				width: 18px;
+			}
+			
+			header {
+				margin-top: 100px;
+				margin-bottom: 200px;
+				text-align: center;
+				font-size: 24px;
+				color: #f55b51;
+				font-weight: 800;
+			}
+			
+			input {
+				border: none;
+				width: 100%;
+			}
+			
+			.kuang1 input {
+				border-bottom: 2px solid #f55b51;
+				height: 25px;
+				font-size: 20px;
+			}
+			#zc a {
+				color: #f55b51;
+			}
+			
+			#wj a {
+				color: #bcbcbc;
+			}
+			
+			.kuang2 input {
+				border-bottom: 2px solid #f55b51;
+				height: 25px;
+				font-size: 20px;
+				margin-top: 35px;
+			}
+			
+			.anniu input {
+				margin-top: 20px;
+				height: 50px;
+				background: #f55b51;
+				display: block;
+				color: white;
+				font-size: 20px;
+				border-radius: 10px;
+			}
+			
+			#zcwj {
+				margin-top: 20px;
+				display: flex;
+				justify-content: center;
+			}
+			
+			#zc {
+				font-size: 20px;
+				color: #f55b51;
+				margin-right: 10px;
+			}
+			
+			#wj {
+				padding-left: 2rem;
+				font-size: 20px;
+				color: #f55b51;
+				margin-right: 10px;
+			}
 		</style>
 	</head>
 	<body>
         <div id="big">
             <div id="fanhui">
                 <a href="">
-                    <img src="img/back_green.png" />
+                    <img src="img/back.png" />
                 </a>
             </div>
             <header>
-                欢迎加入约健
+                欢迎来到爱宠
             </header>
             <section>
                 <from>
@@ -35,21 +106,59 @@
                     </div>
                 </from>
             </section>
-            <div id="zcwj">
-                <div id="zc">
-                    <a href="denglu.html">立即注册</a>
-                </div>1
-
-                <div id="wj">
-                    <a href="wangji.html">忘记密码</a>
-                </div>
-            </div>
         </div>
-		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
 		<script type="text/javascript">
 			$(function(){
 
 			});
+            function yzmm(){
+				var str=document.getElementById("password").value;
+				var reg2 = /([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}/;
+				var reg3 = /[a-zA-Z]+/;
+				var reg4 = /[0-9]+/;
+				if( reg2.test(str) && reg3.test(str) && reg4.test(str)){
+					return true;
+				}else if(!reg2.test(str)){
+					alert("长度在6-18位");
+					return false;
+				}else if(!reg3.test(str)){
+					alert("需含有字母");
+					return false;
+				}else if(!reg4.test(str)){
+					alert("需含有数字");
+					return false;
+				}
+			}
+            function register() {
+                var str=document.getElementById("password").value;
+                var name=document.getElementById("name").value;
+				var reg2 = /([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}/;
+				var reg3 = /[a-zA-Z]+/;
+				var reg4 = /[0-9]+/;
+				if( reg2.test(str) && reg3.test(str) && reg4.test(str) && name){
+					zc(name,str)
+
+				}else if(!name){
+					alert("用户名不能为空");
+					return false;
+				}else if(!reg2.test(str)){
+					alert("长度在6-18位");
+					return false;
+				}else if(!reg3.test(str)){
+					alert("需含有字母");
+					return false;
+				}else if(!reg4.test(str)){
+					alert("需含有数字");
+					return false;
+				}
+            }
+            function zc(name,password) {
+                localStorage.setItem("name", name);
+                localStorage.setItem("password", password);
+                alert("注册成功！");
+                window.location.href = "login.html";
+            }
 		</script>
 	</body>
 </html>

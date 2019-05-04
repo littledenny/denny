@@ -1,14 +1,42 @@
 [
     {
         "title": "金毛",
-        "imgurl": "img/pet/金毛1.jpg"
+		"imgurl": "img/pet/金毛1.jpg",
+		"href": "pages/pet1.html"
     },
 	{
-	    "title": "金毛",
-	    "imgurl": "img/pet/金毛1.jpg"
+        "title": "哈士奇",
+		"imgurl": "img/pet/哈士奇.png",
+		"href": "pages/pet2.html"
+    },
+	{
+        "title": "比熊犬",
+		"imgurl": "img/pet/比熊犬.jpg",
+		"href": "pages/pet3.html"
 	},
 	{
-	    "title": "金毛",
-	    "imgurl": "img/pet/金毛1.jpg"
+        "title": "博美犬",
+		"imgurl": "img/pet/博美犬.jpg",
+		"href": "pages/pet4.html"
+	},
+	{
+        "title": "边牧",
+		"imgurl": "img/pet/边牧.jpg",
+		"href": "pages/pet5.html"
+	},
+	{
+        "title": "短毛猫",
+		"imgurl": "img/pet/短毛猫.jpg",
+		"href": "pages/pet6.html"
+	},
+	{
+        "title": "波斯猫",
+		"imgurl": "img/pet/波斯猫.jpg",
+		"href": "pages/pet7.html"
+	},
+	{
+        "title": "折耳猫",
+		"imgurl": "img/pet/折耳猫.jpg",
+		"href": "pages/pet8.html"
 	}
 ]

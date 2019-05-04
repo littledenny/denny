@@ -238,6 +238,7 @@
 				}
             })
             $(".cright").click(function() {
+                    var lnum = $(".cnum").text().valueOf();
 					lnum++;
 					$(".cnum").text(lnum);
 					var sam = (price * lnum);

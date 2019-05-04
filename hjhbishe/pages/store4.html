@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>商品详情</title>
+	<meta name="viewport"
+		content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+    
+</head>
+<style>
+	.page__header {
+		width: 375px;
+		height: 52px;
+		line-height: 52px;
+		display: flex;
+		border-bottom: 1px solid #d2d2d2;
+		box-shadow: 0px 1px 9px #ccc;
+	}
+
+	.page__header h2 {
+		text-align: center;
+		font-size: 18px;
+		color: #383838;
+		font-weight: 400;
+		width: 350px;
+	}
+
+	.page__header img {
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		margin-top: 15px;
+    }
+    .banner-box img{
+        width: 375px;
+    }
+    .shop__info{
+        width: 359px;
+        border-top: 2px solid lightgray;
+        margin-left: 8px;
+        margin-right: 8px;
+
+    }
+    .shop__info__top{
+        color: #000000;
+
+    }
+    .shop__info__center{
+        color: #FF6600;
+    }
+    .shop__info__bottom{
+        color: #FC4A00;
+
+    }
+    .shop__li{
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        border-bottom: 1px solid lightgray;
+
+    }
+    .shop__xc{
+        border: 1px solid #f30;
+        border-radius: 5px;
+        height: 18px;
+        line-height: 18px;
+        color: #f30;
+        margin-left: 10px;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .chose__num{
+        width: 375px;
+        border-bottom: 1px solid lightgray;
+
+    }
+    .chose__num p{
+        margin-left: 10px;
+    }
+    .computed__box{
+        display: flex;
+        margin-left: 15px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+
+
+    }
+    .computed__box div{
+        border: 1px solid gray;
+        text-align: center;
+        height: 24px;
+
+    }
+    .cbox{
+        width: 30px;
+    }
+    .cnum{
+        width: 50px;
+    }
+    .shop__bottom{
+        display: flex;
+        position: relative;
+        position:fixed;
+        bottom:0px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        width: 375px;
+        border-top: 1px solid lightgray;
+        background: white;
+    }
+    .shop__bottom__left{
+        margin-left: 15px;
+    }
+    .shop__bottom__right{
+        position: absolute;
+        right: 15px;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        background: red;
+        border-radius: 16px;
+        color: #ffffff;
+        
+    }
+</style>
+
+<body>
+    <header class="page__header">
+        <img src="../img/back.png" onclick="history.back()">
+        <h2>商城</h2>
+    </header>
+    
+	<div id="storeappend">
+        <!-- 轮播图部分 -->
+			<div class="banner__lunbo">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide banner-box"><img src="../img/store/1.jpg"></div>
+                        <div class="swiper-slide banner-box"><img src="../img/store/1-1.jpg"></div>
+                        <div class="swiper-slide banner-box"><img src="../img/store/1.2.jpg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shopappend" class="shop__info">
+            </div>
+
+            <div class="shop__info shop__li">
+                促销
+                <div class="shop__xc">
+                    直降
+                </div>
+            </div>
+
+            <div class="chose__num">
+                <p>购买数量</p>
+                <div class="computed__box">
+                    <div class="cleft cbox">
+                        -
+                    </div>
+                    <div class="cnum">
+                        0
+                    </div>
+                    <div class="cright cbox">
+                        +
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shop__bottom">
+                <div class="shop__bottom__left">
+                    结算总额：<span id="sambox"></span>
+                </div>
+                <div class="shop__bottom__right">
+                    购买
+                </div>
+            </div>
+	</div>
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+    // export default {
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: true, //可选选项，自动滑动
+            loop : true, //环路
+            pagination: {
+                el: '.swiper-pagination',
+                // bulletClass : 'my-bullet',
+            },
+        })
+    </script>
+	<script type="text/javascript">
+		$(function () {
+            var price
+			function pushPet() {
+				$.getJSON("../json/store4.json", function (data) {
+					$.each(data, function (i, item) {
+						console.log(item)
+                        addPet(item)
+                        price = item.price
+                    })
+                    
+				})
+			}
+			function addPet(item) {
+				var petstr =
+					`
+					<div class="shop__info__top">
+                        ${item.title}
+                    </div>
+                    <div class="shop__info__center">
+                        ￥<span>${item.price}</span>
+                    </div>
+                    <div class="shop__info__bottom">
+                        已售${item.ys}
+                    </div>
+
+					`
+                $("#shopappend").append(petstr)
+                
+			}
+            pushPet()
+            $(".cleft").click(function() {
+                
+                var lnum = $(".cnum").text().valueOf();
+				if(lnum >= 1) {
+					lnum--;
+					$(".cnum").text(lnum);
+					var sam = (price * lnum);
+					$("#sambox").text(sam);
+				}
+            })
+            $(".cright").click(function() {
+                    var lnum = $(".cnum").text().valueOf();
+					lnum++;
+					$(".cnum").text(lnum);
+					var sam = (price * lnum);
+					$("#sambox").text(sam);
+			})
+
+		});
+	</script>
+</body>
+
+</html>

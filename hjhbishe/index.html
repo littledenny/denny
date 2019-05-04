@@ -145,6 +145,12 @@
 				</div>
 				<div id="petappend" class="section__body">
 					<!-- ajax调用JSON填充 -->
+					<!-- <a href="pages/know1.html">
+						<div class="cat__card">
+							<img src="${item.imgurl}" >
+							<p>${item.title}</p>
+						</div>
+					</a> -->
 
 				</div>
 				<section class="section__box">
@@ -172,12 +178,17 @@
 		<aside class="kong"></aside>
 		<footer>
 			<div class="footer__box">
-				<img src="img/首页选中.png" >
-				<p>首页</p>
+				<a href="index.html">
+					<img src="img/首页选中.png" >
+					<p>首页</p>
+				</a>
 			</div>
 			<div class="footer__box">
-				<img src="img/购物车未选中.png" >
-				<p>首页</p>
+				<a href="store.html">
+					<img src="img/购物车未选中.png" >
+					<p>购物</p>
+				</a>
+
 			</div>
 			<div class="footer__box">
 				<a href="video.html">
@@ -218,10 +229,12 @@
 				function addPet(item){
 					var petstr = 
 					`
-						<div class="cat__card">
-							<img src="${item.imgurl}" >
-							<p>${item.title}</p>
-						</div>
+						<a href="${item.href}">
+							<div class="cat__card">
+								<img src="${item.imgurl}" >
+								<p>${item.title}</p>
+							</div>
+						</a>
 					`
 					$("#petappend").append(petstr)
 				}
@@ -246,7 +259,7 @@
 								<span>${item.time}</span>
 							</div>
 							<div class="zhishi__box__right">
-								<img src="img/pet/布偶猫1.jpg" >
+								<img src="${item.imgurl}" >
 							</div>
 						</div>
 					</a>

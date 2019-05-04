@@ -3,42 +3,49 @@
         "title": "这家伙今天竟然逃出来把家里搞的一团糟",
         "videourl": "video/video1.mp4",
 		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+		"author":"冰心萍儿",
+		"hits":"2"
     },
 	{
 	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "videourl": "video/video2.mp4",
+		"txurl":"img/pet/比熊犬.jpg",
+		"author":"台风汪",
+		"hits":"3"
 	},
 	{
-	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "title": "四只猫与一个笨主子的故事",
+	    "videourl": "video/video3.mp4",
+		"txurl":"img/pet/哈士奇3.jpg",
+		"author":"药药",
+		"hits":"5"
 	},
 	{
-	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "title": "鸟语花香",
+	    "videourl": "video/video4.mp4",
+		"txurl":"img/pet/博美3.jpg",
+		"author":"阿拉斯加",
+		"hits":"9"
 	},
 	{
-	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "title": "困了啊",
+	    "videourl": "video/video5.mp4",
+		"txurl":"img/pet/折耳猫.jpg",
+		"author":"mobi465465",
+		"hits":"4"
 	},
 	{
-	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "title": "差点成为流浪狗的茅台的小伙伴，还好没有被遗弃，现在很健康的继续生活着",
+	    "videourl": "video/video6.mp4",
+		"txurl":"img/pet/短毛3.jpg",
+		"author":"大头茅台",
+		"hits":"9"
 	},
 	{
-	    "title": "这家伙今天竟然逃出来把家里搞的一团糟",
-	    "videourl": "video/video1.mp4",
-		"txurl":"img/pet/金毛1.jpg",
-		"author":"冰心萍儿"
+	    "title": "嗨起来",
+	    "videourl": "video/video7.mp4",
+		"txurl":"img/pet/波斯猫.jpg",
+		"author":"韩信8125",
+		"hits":"7"
 	}
 ]

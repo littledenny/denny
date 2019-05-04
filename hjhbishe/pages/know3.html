@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>知识</title>
+	<meta name="viewport"
+		content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<style>
+	.page__header {
+		width: 375px;
+		height: 52px;
+		line-height: 52px;
+		display: flex;
+		border-bottom: 1px solid #d2d2d2;
+		box-shadow: 0px 1px 9px #ccc;
+	}
+
+	.page__header h2 {
+		text-align: center;
+		font-size: 18px;
+		color: #383838;
+		font-weight: 400;
+		width: 350px;
+	}
+
+	.page__header img {
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		margin-top: 15px;
+	}
+
+	.article__know {
+		width: 332px;
+		margin-left: 20px;
+	}
+
+	.article__top {
+		width: 350px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		color: #6d6d6d
+	}
+
+	.article__top span {
+		margin-left: 35px;
+	}
+
+	.article__img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 50px;
+	}
+
+	.article__main {
+		text-indent: 30px;
+		color: #717171;
+		font-size: 15px;
+		line-height: 26px;
+	}
+</style>
+
+<body>
+	<div id="knowappend">
+		<!-- <header class="page__header">
+			<img src="../img/back.png" onclick="history.back()">
+			<h2>什么原因导致布偶猫价格如此高</h2>
+		</header>
+		<section class="">
+			<article class="article__know">
+				<p class="article__top">2018-06-16 10:20:34<span>小黑</span></p>
+				<img class="article__img" src="../img/banner1.jpg" alt="">
+				<p class="article__main">
+					人们常常认为布偶猫很迟钝，尤其对无疼痛方面的感知，但其实这是错误的。布偶猫不是感觉迟钝，牠们只是忍耐力很强。我们都知道这两年布偶猫在国内市场的大火，那究竟是那些原因导致布偶猫价格如此高呢？
+				</p>
+				<p class="article__main">偶猫有三种主要区分的颜色，重点色（pointed）、戴手套（mitted）、以及双色（bicolor）。因此，挑选时可以从这三种类别中选择自己喜欢的。
+				</p>
+				<p class="article__main">颜色对称的双色布偶猫，在繁殖上具有一定的难度，因此，颜色越是对称的双色布偶猫，以经济价值来说是高过於重点色的布偶猫的
+				</p>
+				<p class="article__main">
+					虽然每只猫咪的个性都是独特的，但是布偶猫的忍耐力是非常强的，这也导致布偶猫的粘人、脾气好的个性，非常适合女生以及没有呼吸道疾病的老年人饲养。在饲养前，要先观察其性格，然后思考自己的喜好和适合度。
+					　　 小编还是要提醒各位新手家长，在挑选布偶猫时请一定要注意他们的健康状况，确定带回家的布偶猫是健康的还是很重要的。
+				</p>
+			</article>
+		</section> -->
+	</div>
+
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+
+			function pushPet() {
+				$.getJSON("../json/know3.json", function (data) {
+					$.each(data, function (i, item) {
+						console.log(item)
+						addPet(item)
+					})
+				})
+			}
+			function addPet(item) {
+				var petstr =
+					`
+					<header class="page__header">
+						<img src="../img/back.png" onclick="history.back()">
+						<h2>${item.title}</h2>
+					</header>
+					<section class="">
+						<article class="article__know">
+							<p class="article__top">${item.time}<span>${item.author}</span></p>
+							<img class="article__img" src="${item.imageurl}">
+							<p class="article__main">
+								${item.p1}
+							</p>
+							<p class="article__main">${item.p2}
+							</p>
+							<p class="article__main">${item.p3}
+							</p>
+							<p class="article__main">
+								${item.p4}
+							</p>
+						</article>
+					</section>
+
+					`
+				$("#knowappend").append(petstr)
+			}
+			pushPet()
+
+		});
+	</script>
+</body>
+
+</html>

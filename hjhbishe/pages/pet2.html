@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>宠物科普</title>
+	<meta name="viewport"
+		content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<style>
+	.page__header {
+		width: 375px;
+		height: 52px;
+		line-height: 52px;
+		display: flex;
+		border-bottom: 1px solid #d2d2d2;
+		box-shadow: 0px 1px 9px #ccc;
+	}
+
+	.page__header h2 {
+		text-align: center;
+		font-size: 18px;
+		color: #383838;
+		font-weight: 400;
+		width: 350px;
+	}
+
+	.page__header img {
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		margin-top: 15px;
+	}
+
+	.cwxq__top img {
+		width: 375px;
+		height: auto;
+	}
+
+	.cwxq__info__ul {
+		margin-left: 20px;
+	}
+
+	.cwxq__info__ul li {
+		height: 40px;
+		line-height: 40px;
+		color: #717171;
+
+	}
+
+	.cwxq__info__ul li span {
+		color: black;
+		margin-right: 15px;
+	}
+
+	.cwxq__info__box {
+		background: #f0efed;
+	}
+
+	.cwxq__info__header {
+		margin-top: 20px;
+		width: 375px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		border-top: 1px solid #ffffff;
+		border-bottom: 1px solid #ffffff;
+		border-left: 4px solid #8fc31f;
+	}
+
+	.cwxq__info__body {
+		margin-top: 15px;
+	}
+
+	.cwxq__info__body P {
+		text-indent: 30px;
+		color: #717171;
+		font-size: 15px;
+		line-height: 26px;
+	}
+
+	.cwxq__info__img img {
+		width: 340px;
+		height: 240px;
+		margin-left: 16px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.cwxq {
+		margin-bottom: 40px;
+	}
+</style>
+
+<body>
+	<div id="petappend">
+		
+	</div>
+
+
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function pushPet() {
+			$.getJSON("../json/pet2.json", function (data) {
+				$.each(data, function (i, item) {
+					console.log(item)
+					addPet(item)
+				})
+			})
+		}
+		function addPet(item) {
+			var petstr =
+				`
+					<header class="page__header">
+						<img src="../img/back.png" onclick="history.back()">
+						<h2>${item.title}</h2>
+					</header>
+					<section class="cwxq">
+						<div class="cwxq__top">
+							<img src="${item.imageurl}">
+						</div>
+						<div class="cwxq__info">
+							<ul class="cwxq__info__ul">
+								<li>
+									<span>英文名</span>${item.ename}
+								</li>
+								<li>
+									<span>祖籍</span>${item.home}
+								</li>
+								<li>
+									<span>价格</span>${item.price}
+								</li>
+								<li>
+									<span>寿命</span>${item.lifetime}
+								</li>
+								<li>
+									<span>易患病</span>${item.disease}
+								</li>
+								<li>
+									<span>性格</span>${item.character}
+								</li>
+							</ul>
+						</div>
+
+						<div class="cwxq__info__box">
+							<div class="cwxq__info__header">
+								品种简介
+							</div>
+							<div class="cwxq__info__img">
+								<img src="${item.imageurl1}">
+							</div>
+							<div class="cwxq__info__body">
+								<p>
+									${item.p1}
+								</p>
+							</div>
+						</div>
+
+						<div class="cwxq__info__box">
+							<div class="cwxq__info__header">
+								形态特征
+							</div>
+							<div class="cwxq__info__body">
+								<p>
+									${item.p2}									
+								</p>
+
+							</div>
+						</div>
+
+						<div class="cwxq__info__box">
+							<div class="cwxq__info__header">
+								性格特点
+							</div>
+							<div class="cwxq__info__body">
+								<p>  
+									${item.p3}									
+
+								</p>
+
+							</div>
+						</div>
+
+						<div class="cwxq__info__box">
+								<div class="cwxq__info__header">
+									养护知识
+								</div>
+								<div class="cwxq__info__body">
+									<p>
+										${item.p4}	
+									</p>
+				
+								</div>
+							</div>
+
+
+					</section>
+
+					`
+			$("#petappend").append(petstr)
+		}
+		pushPet()
+	</script>
+</body>
+
+</html>
