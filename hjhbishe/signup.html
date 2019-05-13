@@ -8,77 +8,80 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<style type="text/css">
             #big {
-				margin-left: 20px;
-				margin-right: 20px;
-				margin-top: 10px;
-			}
-			
-			#big img {
-				width: 18px;
-			}
-			
-			header {
-				margin-top: 100px;
-				margin-bottom: 200px;
-				text-align: center;
-				font-size: 24px;
-				color: #f55b51;
-				font-weight: 800;
-			}
-			
-			input {
-				border: none;
-				width: 100%;
-			}
-			
-			.kuang1 input {
-				border-bottom: 2px solid #f55b51;
-				height: 25px;
-				font-size: 20px;
-			}
-			#zc a {
-				color: #f55b51;
-			}
-			
-			#wj a {
-				color: #bcbcbc;
-			}
-			
-			.kuang2 input {
-				border-bottom: 2px solid #f55b51;
-				height: 25px;
-				font-size: 20px;
-				margin-top: 35px;
-			}
-			
-			.anniu input {
-				margin-top: 20px;
-				height: 50px;
-				background: #f55b51;
-				display: block;
-				color: white;
-				font-size: 20px;
-				border-radius: 10px;
-			}
-			
-			#zcwj {
-				margin-top: 20px;
-				display: flex;
-				justify-content: center;
-			}
-			
-			#zc {
-				font-size: 20px;
-				color: #f55b51;
-				margin-right: 10px;
-			}
-			
-			#wj {
-				padding-left: 2rem;
-				font-size: 20px;
-				color: #f55b51;
-				margin-right: 10px;
-			}
+           	margin-left: 20px;
+           	margin-right: 20px;
+           	margin-top: 10px;
+           }
+           
+           #fanhui img {
+           	width: 18px;
+           }
+           
+           header {
+           	margin-top: 100px;
+           	margin-bottom: 160px;
+           	text-align: center;
+           	font-size: 24px;
+           	color: #f55b51;
+           	font-weight: 800;
+           }
+           
+           input {
+           	border: none;
+           	width: 100%;
+           }
+           
+           .kuang1 input {
+           	border-bottom: 2px solid #f55b51;
+           	height: 25px;
+           	font-size: 20px;
+           }
+           #zc a {
+           	color: #f55b51;
+           }
+           
+           #wj a {
+           	color: #bcbcbc;
+           }
+           
+           .kuang2 input {
+           	border-bottom: 2px solid #f55b51;
+           	height: 25px;
+           	font-size: 20px;
+           	margin-top: 35px;
+           }
+           
+           .anniu input {
+           	margin-top: 20px;
+           	height: 50px;
+           	background: #f55b51;
+           	display: block;
+           	color: white;
+           	font-size: 20px;
+           	border-radius: 10px;
+           }
+           
+           #zcwj {
+           	margin-top: 20px;
+           	display: flex;
+           	justify-content: center;
+           }
+           
+           #zc {
+           	font-size: 20px;
+           	color: #f55b51;
+           	margin-right: 10px;
+           }
+           
+           #wj {
+           	padding-left: 2rem;
+           	font-size: 20px;
+           	color: #f55b51;
+           	margin-right: 10px;
+           }
+           #welword{
+           	margin-top: 30px;
+           }
 		</style>
 	</head>
 	<body>
@@ -89,7 +92,10 @@
                 </a>
             </div>
             <header>
-                欢迎来到爱宠
+            	<img src="img/logo.png" >
+            	<div id="welword">
+            		欢迎注册爱宠APP
+            	</div>
             </header>
             <section>
                 <from>
@@ -107,11 +113,7 @@
                 </from>
             </section>
         </div>
-		<!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
 		<script type="text/javascript">
-			$(function(){
-
-			});
             function yzmm(){
 				var str=document.getElementById("password").value;
 				var reg2 = /([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}/;
