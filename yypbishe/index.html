@@ -8,19 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
 		<link rel="stylesheet" type="text/css" href="css/c.css" />
 		<style type="text/css">
-			.layout {}
-
-			
-
-			.main {}
-
-			.main>.main-banner {}
-
-			.main>.main-banner>.main-banner-box {}
-
-			.main>.main-banner>.main-banner-box>.main-banner-box-vessel {}
-
-			.main>.main-banner>.main-banner-box>.main-banner-box-vessel>.banner-box {}
 
 			.main>.main-banner>.main-banner-box>.main-banner-box-vessel>.banner-box>img {
 				width: 100%;
@@ -125,31 +112,36 @@
 					<!-- 推荐攻略部分 -->
 					<div class="main-strategy" id="app">
 						<ul class="strategy-ul">
-							<li class="strategy-li" v-for="item in strategyData">
-								<div class="li-biaoti">
-									{{item.biaoti}}
-								</div>
-								<div class="li-main">
-									<div class="li-pic">
-										<img :src="item.imgurl" >
+							
+								<li class="strategy-li" v-for="item in strategyData">
+									<div class="li-biaoti">
+										{{item.biaoti}}
 									</div>
-									<div class="li-word">
-										<div class="word-top">
-											<div>
-												{{item.word}}
+									<div class="li-main">
+										<a :href="item.link">
+										<div class="li-pic">
+											<img :src="item.imgurl" >
+										</div>
+									</a>
+										<div class="li-word">
+											<div class="word-top">
+												<div>
+													{{item.word}}
+												</div>
+											</div>
+											<div class="word-bottom">
+												<span class="span1">{{item.hits}}次浏览</span>
+												<span class="span2">{{item.author}}</span>
+												<div class="img-div">
+													<img :src="item.touxiang" >
+												</div>
+												
 											</div>
 										</div>
-										<div class="word-bottom">
-											<span class="span1">{{item.hits}}次浏览</span>
-											<span class="span2">{{item.author}}</span>
-											<div class="img-div">
-												<img :src="item.touxiang" >
-											</div>
-											
-										</div>
 									</div>
-								</div>
-							</li>
+								
+								</li>
+							
 						</ul>
 					</div>
 				</div>

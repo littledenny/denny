@@ -64,3 +64,7 @@ footer{
 		color: #999999;
 		font-size: 1rem;
 	}
+	a{text-decoration:none;} 
+a:link{color:#696969;} 
+a:visited{color:#696969;} 
+a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}
