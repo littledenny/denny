@@ -21,7 +21,7 @@
 				border-radius: 1.066rem;
 			}
 
-			.dangdilxd>.ddtop {
+			.dangdilxd .ddtop {
 				display: flex;
 				line-height: 3rem;
 				height: 3rem;
@@ -268,15 +268,17 @@
 					</div>
 					<div class="cnxh">
 						<div class="cnxh-box" v-for="item in cnxh">
-							<img :src="item.imgurl" >
-							<h3>{{item.title}}</h3>
-							<p>{{item.word}}菜</p>
-							<span class="span-left">
-								￥{{item.price}}
-							</span>
-							<span class="span-right">
-								{{item.person}}人购买
-							</span>
+							<a :href="item.link">
+								<img :src="item.imgurl" >
+								<h3>{{item.title}}</h3>
+								<p>{{item.word}}菜</p>
+								<span class="span-left">
+									￥{{item.price}}
+								</span>
+								<span class="span-right">
+									{{item.person}}人购买
+								</span>
+							</a>
 						</div>
 					</div>
 				</div>

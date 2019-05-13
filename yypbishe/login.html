@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<style type="text/css">
+			#big{
+				margin-left: 2rem;
+				margin-right: 2rem;
+				margin-top: 1rem;
+			}
+			#fanhui img{
+				width: 2.5rem;
+			}
+			header{
+				margin-top: 9.7rem;
+				margin-bottom: 8rem;
+				text-align: center;
+				font-size: 3.8rem;
+				color: #42bd55;
+				font-weight: 800;
+			}
+			input{
+				border: none;
+				width: 100%;
+			}
+			.kuang1 input{
+				border-bottom: .14rem solid #42bd55;
+				height: 3rem;
+				font-size: 1.5rem;
+				
+			}
+			.kang2{
+				
+			}
+			.kuang2 input{
+				border-bottom: .14rem solid #42bd55;
+				height: 3rem;
+				font-size: 1.5rem;
+				margin-top: 3rem;
+				
+			}
+			.anniu input{
+				margin-top: 3rem;
+				height: 6.52rem;
+				background: #42bd55;
+				display: block;
+				color: white;
+				font-size: 1.5rem;
+				border-radius: .6rem;
+				
+				
+			}
+			#zcwj{
+				margin-top: 2.5rem;
+				display: flex;
+				justify-content:center;
+				
+			}
+			#zc{
+				font-size:1.5rem;
+				color:#42bd55;
+				margin-right: 2rem;
+			}
+			#zc a{
+				color:#42bd55;
+			}
+			#wj a{
+				color:#bcbcbc;
+			}
+			#wj{
+				padding-left: 2rem;
+				font-size:1.5rem;
+				color:#bcbcbc;
+				border-left: 0.07rem solid #bcbcbc;
+				
+				
+			}
+			.logos{
+				text-align: center;
+			}
+			.logos img{
+				width: 400px;
+				
+				/* height: 600px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="fanhui">
+				<a href="">
+				<img src="img/back_green.png"/>
+				</a>
+			</div>
+			<header>
+				欢迎登录鹏程旅行
+			</header>
+			<div class="logos">
+				<img src="img/logo.png" >
+			</div>
+			<section>
+				<from>
+		            <div class="kuang1">
+			             <input id="name" type="text" class="sjh" placeholder="手机号/邮箱"/>
+		            </div>
+		            
+		            <div class="kuang2">
+			        <input id="password" type="password"  onblur="yzmm()" class="mm" placeholder="密码(最少6位)"/>
+		            </div>
+		            
+		            <div class="anniu">
+			                <input class="a3" type="submit" value="登录" onclick="register()">
+		            </div>
+		        </from>
+			</section>
+			<div id="zcwj">
+				<div id="zc">
+					<a href="zhuce.html">注册账号</a>
+				</div>
+				
+				<div id="wj">
+					<a href="wangji.html">忘记密码</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function register() {
+			    var password=document.getElementById("password").value;
+			    var name=document.getElementById("name").value;
+			    if((name == localStorage.getItem("name")) && (password == localStorage.getItem("password"))){
+			        alert("登录成功，即将跳转首页")
+			        window.location.href = "index.html";
+			
+			    }else{
+			        alert("用户名或密码错误")
+			        document.getElementById("password").value = ""
+			        document.getElementById("name").value = ""
+			    }
+			}
+		</script>
+	</body>
+</html>

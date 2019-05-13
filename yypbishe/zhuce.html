@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<style type="text/css">
+			#big{
+				margin-left: 2rem;
+				margin-right: 2rem;
+				margin-top: 1rem;
+			}
+			#fanhui img{
+				width: 2.5rem;
+			}
+			header{
+				margin-top: 9.7rem;
+				margin-bottom: 8rem;
+				text-align: center;
+				font-size: 3.8rem;
+				color: #42bd55;
+				font-weight: 800;
+			}
+			input{
+				border: none;
+				width: 100%;
+			}
+			.kuang1 input{
+				border-bottom: .14rem solid #42bd55;
+				height: 3rem;
+				font-size: 1.5rem;
+				
+			}
+			.kang2{
+				
+			}
+			.kuang2 input{
+				border-bottom: .14rem solid #42bd55;
+				height: 3rem;
+				font-size: 1.5rem;
+				margin-top: 3rem;
+				
+			}
+			.anniu input{
+				margin-top: 3rem;
+				height: 6.52rem;
+				background: #42bd55;
+				display: block;
+				color: white;
+				font-size: 1.5rem;
+				border-radius: .6rem;
+				
+				
+			}
+			#zcwj{
+				margin-top: 2.5rem;
+				display: flex;
+				justify-content:center;
+				
+			}
+			#zc{
+				font-size:1.5rem;
+				color:#42bd55;
+				margin-right: 2rem;
+			}
+			#zc a{
+				color:#42bd55;
+			}
+			#wj a{
+				color:#bcbcbc;
+			}
+			#wj{
+				padding-left: 2rem;
+				font-size:1.5rem;
+				color:#bcbcbc;
+				border-left: 0.07rem solid #bcbcbc;
+				
+				
+			}
+			.logos{
+				text-align: center;
+			}
+			.logos img{
+				width: 400px;
+				
+				/* height: 600px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="fanhui">
+				<a href="">
+				<img src="img/back_green.png"/>
+				</a>
+			</div>
+			<header>
+				欢迎注册鹏程旅行
+			</header>
+			<div class="logos">
+				<img src="img/logo.png" >
+			</div>
+			<section>
+				<from>
+		            <div class="kuang1">
+			             <input id="name" type="text" class="sjh" placeholder="手机号/邮箱"/>
+		            </div>
+		            
+		            <div class="kuang2">
+			        <input id="password" type="password"  onblur="yzmm()" class="mm" placeholder="密码(最少6位)"/>
+		            </div>
+		            
+		            <div class="anniu">
+			                <input class="a3" type="submit" value="注册" onclick="register()">
+		            </div>
+		        </from>
+			</section>
+			<div id="zcwj">
+				<div id="zc">
+					<a href="denglu.html">登陆账号</a>
+				</div>
+				
+				<div id="wj">
+					<a href="wangji.html">忘记密码</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function yzmm(){
+				var str=document.getElementById("password").value;
+				var reg2 = /([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}/;
+				var reg3 = /[a-zA-Z]+/;
+				var reg4 = /[0-9]+/;
+				if( reg2.test(str) && reg3.test(str) && reg4.test(str)){
+					return true;
+				}else if(!reg2.test(str)){
+					alert("长度在6-18位");
+					return false;
+				}else if(!reg3.test(str)){
+					alert("需含有字母");
+					return false;
+				}else if(!reg4.test(str)){
+					alert("需含有数字");
+					return false;
+				}
+			}
+			function register() {
+			    var str=document.getElementById("password").value;
+			    var name=document.getElementById("name").value;
+				var reg2 = /([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}/;
+				var reg3 = /[a-zA-Z]+/;
+				var reg4 = /[0-9]+/;
+				if( reg2.test(str) && reg3.test(str) && reg4.test(str) && name){
+					zc(name,str)
+			
+				}else if(!name){
+					alert("用户名不能为空");
+					return false;
+				}else if(!reg2.test(str)){
+					alert("长度在6-18位");
+					return false;
+				}else if(!reg3.test(str)){
+					alert("需含有字母");
+					return false;
+				}else if(!reg4.test(str)){
+					alert("需含有数字");
+					return false;
+				}
+			}
+			function zc(name,password) {
+			    localStorage.setItem("name", name);
+			    localStorage.setItem("password", password);
+			    alert("注册成功！");
+			    window.location.href = "login.html";
+			}
+		</script>
+	</body>
+</html>

@@ -4,41 +4,47 @@
         "imgurl": "img/cnxh1.jpg",
         "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
         "price": "580",
-        "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
     },
     {
         "title": "北京当地玩乐",
         "imgurl": "img/cnxh1.jpg",
         "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
         "price": "580",
-        "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
     },
 	{
 	    "title": "北京当地玩乐",
 	    "imgurl": "img/cnxh1.jpg",
 	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
 	    "price": "580",
-	    "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
 	},
 	{
 	    "title": "北京当地玩乐",
 	    "imgurl": "img/cnxh1.jpg",
 	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
 	    "price": "580",
-	    "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
 	},
 	{
 	    "title": "北京当地玩乐",
 	    "imgurl": "img/cnxh1.jpg",
 	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
 	    "price": "580",
-	    "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
 	},
 	{
 	    "title": "北京当地玩乐",
 	    "imgurl": "img/cnxh1.jpg",
 	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
 	    "price": "580",
-	    "person": "2"
+		"person": "2",
+		"link":"html/fx1.html"
 	}
 ]

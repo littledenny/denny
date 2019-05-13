@@ -15,12 +15,6 @@
 			}
 			/* 推荐攻略部分
 			 */
-			.main-strategy{
-				
-			}
-			.main-strategy>.strategy-ul{
-				
-			}
 			.main-strategy>.strategy-ul>.strategy-li{
 				margin-left: 1.5rem;
 			}
@@ -32,10 +26,7 @@
 			.strategy-li>.li-main{
 				display: flex;
 			}
-			.strategy-li>.li-main>.li-pic{
-				
-			}
-			.strategy-li>.li-main>.li-pic>img{
+			.li-pic>img{
 				width: 15.294117rem;
 				height: 10.588235rem;
 			}
@@ -62,9 +53,6 @@
 				display: inline-block;
 				font-size: 1.411764rem;
 				color: #999;
-			}
-			.li-word>.word-bottom>.span2{
-				/* margin-right: 1.17647rem; */
 			}
 			.li-word>.word-bottom>.img-div>img{
 				width: 2.352941rem;
@@ -119,10 +107,10 @@
 									</div>
 									<div class="li-main">
 										<a :href="item.link">
-										<div class="li-pic">
-											<img :src="item.imgurl" >
-										</div>
-									</a>
+											<div class="li-pic">
+												<img :src="item.imgurl" >
+											</div>
+										</a>
 										<div class="li-word">
 											<div class="word-top">
 												<div>
