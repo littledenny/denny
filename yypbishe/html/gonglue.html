@@ -21,14 +21,92 @@
 			.gl__title{
 				width: 96%;
 				margin-left: 2%;
+				font-size: 1.4rem
+			}
+			.gl__page{
+				width: 96%;
+				margin-left: 2%;
+			}
+			.gl__page p{
+				text-indent: 30px;
+				color: #717171;
+				font-size: 15px;
+				line-height: 26px;
 			}
 			.gl__info{
 				width: 96%;
 				margin-left: 2%;
 			}
+			.gl__info__top{
+				margin-bottom: 1rem;
+			}
+			.gl__info__top__left{
+				height: 4rem;
+			}
+			.gl__info__top__left img{
+				width: 3.8rem;
+				height: 3.8rem;
+				border-radius: 50%;
+			}
+			.gl__info__top__center{
+				height: 4rem;
+				margin-left: 1rem;
+			}
+				
+			.gl__info__top__center p{
+				height: 2rem;
+				line-height: 2rem;
+			}
+			.gl__info__top__right{
+				height: 4rem;
+				line-height: 4rem;
+				margin-left: 5rem;
+
+			}
+			.gl__info__middle li{
+				width: 96%;
+				display: flex;
+				height: 3rem;
+				/* float: left; */
+			}
+			.gl__info__middle img{
+				width: 2rem;
+				height: 2rem;
+				margin-left: 2rem;
+			}
+			.gl__info__middle span{
+				height: 2rem;
+				line-height: 2rem;
+				display: block;
+				margin-left: 4rem;
+			}
+			.top__header{
+				display: flex;
+			}
+			.header__left img{
+				width: 1.8rem;
+			}
+			.header__right{
+				height: 1.8rem;
+				line-height: 1.8rem;
+				font-size: 1.5rem;
+				width: 90%;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="top__header">
+			<div class="header__left" onclick="javascript:history.back(-1);">
+				<img src="../img/back_green.png" >
+			</div>
+			
+			<div class="header__right">
+				东极岛
+			</div>
+			
+
+		</div>
 		<div class="gl">
 			<div class="gl__header">
 				<img src="../img/banner3.jpeg"  class="gl__header__img"> 
@@ -77,11 +155,20 @@
 				</div>
 			</div>
 			
+			<div class="gl__page">
+				<p>
+					第一次看见蓝色的大海，还是很兴奋的，特别是刚开始环岛旅行的时候，那种激动的劲，但是走过几个山头，两腿发软，只想早点吃晚饭了。这次入住的民宿是 岛家客栈 说真的，十个赞！！房间不大，很有特色，主要是第一眼就是干净，整洁，让人很舒服，门口有4方桌，有摇摇椅，坐门口就能看到夕阳余晖，老板家的小姐姐很漂亮，很热情，我们一到，就帮忙着给我们搬行李。
+楼下就是自己家的小饭店，性价比非常高，点了一碗炒年糕，小海鲜可以说非常多，觉得是这个岛上性价比最高的一家小餐厅吧，晚上老板怕我们无聊，还特意送上来了水果，十个赞！
+在这里有几个注意事项：选轮船座位，性价比最高的我觉得是卧铺，价格低，躺着舒服。
+买票记得提前买，可以 微信 上搜 舟山海星轮船 直接购票 
+				</p>
+			</div>
+			
 		</div>
 		
 		
 		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="../js/setrem.js" type="text/javascript" charset="utf-8"></script> -->
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	</body>
