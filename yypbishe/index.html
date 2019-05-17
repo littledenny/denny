@@ -15,27 +15,27 @@
 			}
 			/* 推荐攻略部分
 			 */
-			.main-strategy>.strategy-ul>.strategy-li{
+			.main-strategy>.strategy-ul .strategy-li{
 				margin-left: 1.5rem;
 			}
-			.strategy-li>.li-biaoti{
+			.strategy-li .li-biaoti{
 				height: 5.294117rem;
 				line-height: 5.294117rem;
 				font-size: 2.4rem;
 			}
-			.strategy-li>.li-main{
+			.strategy-li .li-main{
 				display: flex;
 			}
-			.li-pic>img{
+			.li-pic img{
 				width: 15.294117rem;
 				height: 10.588235rem;
 			}
-			.strategy-li>.li-main>.li-word{
+			.strategy-li .li-main .li-word{
 				margin-top: 0.196078rem;
 				margin-left: 0.784313rem;
 				
 			}
-			.li-word>.word-top>div{
+			.li-word .word-top>div{
 				color: #999;
 				width: 30rem;
 				height: 7.3rem;
@@ -44,7 +44,7 @@
 				line-height: 2.4rem;
 				overflow: hidden;
 			}
-			.li-word>.word-bottom{
+			.li-word .word-bottom{
 				margin-top: 1.7rem;
 				display: flex;
 				justify-content:space-between;
@@ -102,15 +102,15 @@
 						<ul class="strategy-ul">
 							
 								<li class="strategy-li" v-for="item in strategyData">
+										<a :href="item.link">
 									<div class="li-biaoti">
 										{{item.biaoti}}
 									</div>
 									<div class="li-main">
-										<a :href="item.link">
 											<div class="li-pic">
 												<img :src="item.imgurl" >
 											</div>
-										</a>
+										
 										<div class="li-word">
 											<div class="word-top">
 												<div>
@@ -127,7 +127,7 @@
 											</div>
 										</div>
 									</div>
-								
+								</a>
 								</li>
 							
 						</ul>
