@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport"
+		content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <link rel="stylesheet" type="text/css" href="css/city.css"/> -->
+	<link rel="stylesheet" type="text/css" href="css/c.css" />
+	<style type="text/css">
+		header {
+			width: 100%;
+			height: 6.67rem;
+			border-bottom: .14rem solid #e4e4e4;
+		}
+
+		.dingbu {
+			margin-left: 2.9rem;
+			margin-top: 1.94rem;
+			display: flex;
+			flex-direction: row;
+		}
+
+		header img {
+			width: 4rem;
+		}
+
+		#xzcs {
+
+			line-height: 4rem;
+			font-size: 2rem;
+			margin-left: 5rem;
+			/*margin-top: 3rem;*/
+		}
+
+		.city {
+			width: 100%;
+			background: #f4f4f4;
+			height: 60rem;
+		}
+
+		#hotcity {
+			margin-left: 2.22rem;
+			padding-top: 2rem;
+			margin-bottom: 2rem;
+			font-size: 1.32rem;
+			color: #9B9B9B;
+		}
+
+		.cslb {
+			margin-left: 2.22rem;
+			/*background: pink;*/
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.cslb div {
+			width: 13.5rem;
+			height: 5.56rem;
+			margin-right: 2.36rem;
+			margin-top: 2.36rem;
+			background: white;
+			line-height: 5.56rem;
+			text-align: center;
+			color: #494949;
+			font-size: 1.38rem;
+
+		}
+
+		.huikong {
+			width: 100%;
+			height: 2.63rem;
+			background: #f2f1ed;
+		}
+
+		.huikong2 {
+			width: 100%;
+			height: 40rem;
+			background: #f2f1ed;
+		}
+
+		.clear {
+			height: 6.8rem;
+			margin-left: 2.08rem;
+			margin-right: 2.08rem;
+			display: flex;
+			justify-content: space-between;
+			border-bottom: .07rem solid #e4e4e4;
+
+		}
+
+		.tc {
+			height: 6.8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.6rem;
+		}
+
+		#clear1,
+		#clear2 {
+			display: flex;
+			align-items: center;
+		}
+
+		#clear1 span {
+			font-size: 1.5rem;
+		}
+
+		#clear2 img {
+			width: 3rem;
+		}
+
+		a {
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="dingbu">
+			<div>
+				<a href="mine.html"><img src="img/back_green.png" /></a>
+			</div>
+			<span id="xzcs">
+				设置
+			</span>
+		</div>
+	</header>
+	<div class="huikong">
+
+	</div>
+	<section id="ss1">
+
+		<div class="clear" id="huancun">
+			<div id="clear1">
+
+				<span>
+					清除缓存
+				</span>
+
+			</div>
+			<div id="clear2">
+				<img src="movie/img/right-gray.png" />
+			</div>
+		</div>
+
+
+		<a href="about.html">
+			<div class="clear">
+				<div id="clear1">
+
+					<span>
+						关于
+					</span>
+
+				</div>
+				<div id="clear2">
+					<img src="movie/img/right-gray.png" />
+				</div>
+			</div>
+		</a>
+	</section>
+	<div class="huikong">
+
+	</div>
+	<section id="ss2">
+			<a href="login.html">
+		<div class="tc">
+			<p id="tcdl">
+					退出登陆
+			</p>
+		</div>
+	</a>
+	</section>
+	<div class="huikong2">
+
+	</div>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#huancun").on('click touchend', function (e) {
+			alert("是否清理缓存？");
+		});
+	</script>
+</body>
+
+</html>

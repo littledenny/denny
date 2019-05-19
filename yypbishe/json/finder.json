@@ -16,20 +16,20 @@
 		"link":"html/fx2.html"
     },
 	{
-	    "title": "北京当地玩乐",
-	    "imgurl": "img/cnxh1.jpg",
-	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
-	    "price": "580",
+	    "title": "丽江当地玩乐",
+	    "imgurl": "img/fx/3-1.png",
+	    "word": "昆明+大理+丽江+泸沽湖7日游",
+	    "price": "6999",
 		"person": "2",
-		"link":"html/fx1.html"
+		"link":"html/fx3.html"
 	},
 	{
-	    "title": "北京当地玩乐",
-	    "imgurl": "img/cnxh1.jpg",
-	    "word": "北京怀柔乡居童话镇住宿1晚+双早+虹鳟私房菜",
-	    "price": "580",
-		"person": "2",
-		"link":"html/fx1.html"
+	    "title": "香港当地玩乐",
+	    "imgurl": "img/fx/4-1.png",
+	    "word": " 香港迪士尼乐园1日/2日门票",
+	    "price": "999",
+		"person": "5",
+		"link":"html/fx4.html"
 	},
 	{
 	    "title": "北京当地玩乐",

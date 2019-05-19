@@ -13,19 +13,23 @@
 	<body>
 		<header>
 			<div class="head1">
-				<!-- <a href="setting.html">
+				<a href="setting.html">
 					<img src="img/setting_white.png"/>
-				</a> -->
+				</a>
 			</div>
-			<div class="head2">
-				<div id="touxiang">
-					<img src="img/yyp.jpg"/>
-				</div>
-				<div id="txright">
-					<span>袁艺鹏</span>
 
+			<div id="app">
+				<div class="head2">
+					<div id="touxiang">
+						<img :src="scr" @click="changesrc()"/>
+						<input type="file" :id="id" @change="preview($event)" class="input__file">
+					</div>
+					<div id="txright">
+						<span>袁艺鹏</span>
+
+					</div>
+					
 				</div>
-				
 			</div>
 		</header>
 		<div class="tabs">
@@ -120,6 +124,7 @@
 		<script src="js/setrem.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>		
 		<script type="text/javascript">
 			var mySwiper = new Swiper('.swiper-container', {
 				on: {
@@ -141,6 +146,44 @@
 			$(".tabs div").click(function(e) {
 				e.preventDefault();
 			});
+		</script>
+
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					strategyData:[], //推荐攻略的数据 数组
+					id:"txwj",
+					scr:"img/yyp.jpg"
+				},
+				mounted: function() {
+					// this.first()
+				},
+				methods: {
+					preview(event){
+					let files = document.getElementById(this.id).files[0]
+					this.imgDataUrl = this.getObjectURL(files)
+					console.log(this.imgDataUrl)
+					this.scr = this.imgDataUrl
+					},
+					getObjectURL (file) {
+						let url = null ;
+						if (window.createObjectURL!=undefined) { // basic
+							url = window.createObjectURL(file) ;
+						}else if (window.webkitURL!=undefined) { // webkit or chrome
+							url = window.webkitURL.createObjectURL(file) ;
+						}else if (window.URL!=undefined) { // mozilla(firefox)
+							url = window.URL.createObjectURL(file) ;
+						}
+						return url ;
+					},
+					changesrc() {
+						document.querySelector('input[type=file]').click();
+					}
+
+					
+				}
+			})
 		</script>
 	</body>
 </html>
